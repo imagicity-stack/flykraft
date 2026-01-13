@@ -84,7 +84,7 @@
         </section>
 
         <section class="section" id="about">
-          <h2 class="section-title">About Us</h2>
+          <h2 class="section-title animate-on-scroll">About Us</h2>
           <p class="section-subtitle">
             We are a synergy-first group building businesses that thrive in India and
             global markets. Our approach is to connect expertise, capital, and talent
@@ -117,7 +117,7 @@
         </section>
 
         <section class="section" id="projects">
-          <h2 class="section-title">Our Projects</h2>
+          <h2 class="section-title animate-on-scroll">Our Projects</h2>
           <p class="section-subtitle">
             A snapshot of initiatives currently shaping our conglomerate portfolio.
           </p>
@@ -158,7 +158,7 @@
         </section>
 
         <section class="section" id="directors">
-          <h2 class="section-title">Directors</h2>
+          <h2 class="section-title animate-on-scroll">Directors</h2>
           <p class="section-subtitle">
             Strategic leadership combining visionary direction with operational depth.
           </p>
@@ -189,7 +189,7 @@
         </section>
 
         <section class="section" id="contact">
-          <h2 class="section-title">Contact</h2>
+          <h2 class="section-title animate-on-scroll">Contact</h2>
           <p class="section-subtitle">
             Connect with us for partnerships, media, or growth opportunities.
           </p>
@@ -219,5 +219,22 @@
         </footer>
       </div>
     </div>
+    <script>
+      const animatedItems = document.querySelectorAll(".animate-on-scroll");
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("tracking-in-expand");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.5 }
+      );
+
+      animatedItems.forEach((item) => observer.observe(item));
+    </script>
   </body>
 </html>
