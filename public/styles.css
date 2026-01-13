@@ -114,6 +114,18 @@ a {
   gap: 16px;
 }
 
+.icon-button {
+  border: 1px solid #d7e4d1;
+  background: #ffffff;
+  border-radius: 999px;
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
 .action-pill {
   background: var(--pill);
   border-radius: 999px;
